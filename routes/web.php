@@ -16,15 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::name('front.')->group(function(){
-   Route::view('/home','front.index')->name('home');
+   Route::view('/','front.index')->name('index');
    Route::view('/about','front.about')->name('about');
    Route::view('/service','front.service')->name('service');
    Route::view('/contact','front.contact')->name('contact');
 
 });
-Route::get('/', function () {
-    return view('front.index');
+Route::name('admin.')->group(function(){
+   Route::view('/admin','admin.index')->name('index');
+
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
