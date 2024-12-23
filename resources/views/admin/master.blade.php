@@ -1,25 +1,31 @@
+
+
+
 <!doctype html>
 <html lang="en">
-    @include('admin.partial.head')
+@include('admin.partial.head')
 
-  <body class="vertical  light  ">
+<body class="vertical  light @if (LaravelLocalization::getCurrentLocale()  == 'ar')
+  rtl
+@endif ">
     <div class="wrapper">
-     @include('admin.partial.navbar')
+        @include('admin.partial.navbar')
 
 
 
 
 
-      @include('admin.partial.sidebar')
-   
-   
-      <main role="main" class="main-content">
+        @include('admin.partial.sidebar')
 
-        @yield('content')
-     
-      </main> <!-- main -->
+
+        <main role="main" class="main-content">
+
+            @yield('content')
+
+        </main> <!-- main -->
     </div>
-     <!-- .wrapper -->
+    <!-- .wrapper -->
     @include('admin.partial.scripts')
-  </body>
+</body>
+
 </html>
