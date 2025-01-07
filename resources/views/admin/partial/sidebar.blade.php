@@ -30,9 +30,13 @@
             <span>{{ __('keywords.components') }}</span>
         </p>
         <ul class="navbar-nav flex-fill w-100 mb-2">
-          
+
             <x-sidebar-component href="{{ route('admin.services.index') }}" icon="fe-command"
                 name="{{ __('keywords.services') }}">
+            </x-sidebar-component>
+
+            <x-sidebar-component href="{{ route('admin.feature.index') }}" icon="fe-star"
+                name="{{ __('keywords.feature') }}">
             </x-sidebar-component>
 
 

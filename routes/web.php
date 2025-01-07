@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,11 @@ group(function(){
 //=========================== SERVICES ==============================
             Route::controller(ServiceController::class)->group(function(){
             Route::resource('services', ServiceController::class);
+
+        });
+//=========================== feature ==============================
+            Route::controller(FeatureController::class)->group(function(){
+            Route::resource('feature', FeatureController::class);
 
         });
 
