@@ -62,7 +62,6 @@ class ServiceController extends Controller
     public function update(UpdateServiceRequest $request, Service $service)
     { 
   
-
         $data=$request->validated();
         $service->update($data);
         return redirect()->route('admin.services.index')->with('success',__('keywords.service_updated'));

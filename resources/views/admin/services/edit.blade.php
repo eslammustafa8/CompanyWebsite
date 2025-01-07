@@ -13,40 +13,35 @@
                 </div>
                 <div class="card shadow">
                     <div class="card-body">
-                        <form action="{{ route('admin.services.update',['service'=>$service]) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('admin.services.update', ['service' => $service]) }}" method="POST"
+                            enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
 
-                                    <label for="title">{{ __('keywords.title') }}</label>
+                                    <x-form-label field="title"></x-form-label>
                                     <input type="text" id="title" class="form-control"
-                                        placeholder="{{ __('keywords.title') }}" name="title" value="{{ $service->title }}">
-                                    @error('title')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                        placeholder="{{ __('keywords.title') }}" name="title"
+                                        value="{{ $service->title }}">
+                                    <x-validation-error field="title"></x-validation-error>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="icon">{{ __('keywords.icon') }}</label>
+                                    <x-form-label field="icon"></x-form-label>
                                     <input type="text" id="icon" class="form-control"
                                         placeholder="{{ __('keywords.icon') }}" name="icon" value="{{ $service->icon }}">
-                                    @error('icon')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-error field="icon"></x-validation-error>
                                 </div>
 
                                 <div class="col-md-12 mt-3">
-                                    <label for="description">{{ __('keywords.description') }}</label>
-                                    <textarea id="description" class="form-control"  value="{{ $service->description }}" name="description">{{ __('keywords.description') }}</textarea>
-                                    @error('description')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-form-label field="description"></x-form-label>
+                                    <textarea id="description" class="form-control" name="description">{{ $service->description }}</textarea>
+                                    <x-validation-error field="description"></x-validation-error>
 
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="submit" 
-                                        class="btn btn-success btn-sm mt-2">{{ __('keywords.update') }}</button>
+                                    <x-submit-button label="update"></x-submit-button>
                                 </div>
                             </div>
 

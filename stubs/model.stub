@@ -14,6 +14,6 @@ class {{ class }} extends Model
     protected $table="";
 
    //? to make all fields mass assignable else id
-    protected $guarded=['id];
+    protected $guarded=['id'];
 
 }
