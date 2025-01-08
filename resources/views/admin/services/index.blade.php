@@ -27,7 +27,7 @@
                                     <th>{{ __('keywords.title') }}</th>
                                     {{-- <th>{{ __('keywords.description') }}</th> --}}
                                     <th width="10%">{{ __('keywords.icon') }}</th>
-                                    <th width="15%">{{ __('keywords.actions') }}</th>
+                                    <th width="20%">{{ __('keywords.actions') }}</th>
 
                                 </tr>
                             </thead>
@@ -42,19 +42,19 @@
                                             <td>
                                                 <i class="{{ $service->icon }} fa-2x"></i>
                                             <td>
+                                                
+                                                 <x-action-button
+                                                        href="{{ route('admin.services.edit', ['service' => $service]) }}"
+                                                        type="edit"></x-action-button>
+                                                    <x-action-button
+                                                        href="{{ route('admin.services.show', ['service' => $service]) }}"
+                                                        type="show"></x-action-button>
 
-                                                <x-action-button
-                                                    href="{{ route('admin.services.edit', ['service' => $service]) }}"
-                                                    type="edit"></x-action-button>
-                                                <x-action-button
-                                                    href="{{ route('admin.services.show', ['service' => $service]) }}"
-                                                    type="show"></x-action-button>
 
+                                                    <x-delete-button :href="route('admin.services.destroy', ['service' => $service])"
+                                                        id="{{ $service->id }}"></x-delete-button>
 
-                                                <x-delete-button :href="route('admin.services.destroy', ['service' => $service])"
-                                                    id="{{ $service->id }}"></x-delete-button>
-
-                                                </form>
+                                              
                                             </td>
                                         </tr>
                                     @endforeach
@@ -71,6 +71,6 @@
         </div>
     </div>
 
-   
+
 
 @endsection

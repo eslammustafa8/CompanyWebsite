@@ -49,8 +49,20 @@ return [
     'feature_updated'=>'Feature Updated Successfully',
     'feature_deleted'=>'Feature Deleted Successfully',  
 
+    // Subscribers
 
-    
+    'email'=>'Email',
+    'subscribers'=>'Subscribers',
+    'subscriber_deleted'=>'Subscriber Deleted Successfully',
+     //messages
+    'messages'=>'Messages',
+    'message' => 'Message',
+    'name'=>'Name',
+    'subject'=>'Subject', 
+    'message_deleted'=>'Message Deleted Successfully',
+    'show_message'  =>'Show message',
+
+            
 
 
 ];

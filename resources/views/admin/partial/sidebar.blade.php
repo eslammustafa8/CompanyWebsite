@@ -30,16 +30,25 @@
             <span>{{ __('keywords.components') }}</span>
         </p>
         <ul class="navbar-nav flex-fill w-100 mb-2">
-
+            {{-- services --}}
             <x-sidebar-component href="{{ route('admin.services.index') }}" icon="fe-command"
                 name="{{ __('keywords.services') }}">
             </x-sidebar-component>
 
+            {{-- Features --}}
             <x-sidebar-component href="{{ route('admin.feature.index') }}" icon="fe-star"
                 name="{{ __('keywords.feature') }}">
             </x-sidebar-component>
 
+            {{-- Subscribers --}}
+            <x-sidebar-component href="{{ route('admin.subscribers.index') }}" icon="fe-users"
+                name="{{ __('keywords.subscribers') }}">
+            </x-sidebar-component>
 
+            {{-- messages --}}
+            <x-sidebar-component href="{{ route('admin.messages.index') }}" icon="fe-message-square"
+                name="{{ __('keywords.messages') }}">
+            </x-sidebar-component>
 
         </ul>
 

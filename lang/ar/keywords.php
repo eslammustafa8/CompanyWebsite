@@ -47,6 +47,22 @@ return [
     'update_feature' => 'تحديث الميزة',
     'feature_updated' => 'تم تحديث الميزة بنجاح',
     'feature_deleted' => 'تم حذف الميزة بنجاح',
+
+    // Subscribers
+
+    'email'=>'البريد الإلكتروني',
+    'subscribers'=>'المشتركين',
+    'subscriber_deleted'=>'تم حذف المشترك بنجاح',
+//messages
+'message' => 'الرسالة',
+'messages' => 'الرسائل',
+'name' => 'الاسم',
+'subject' => 'الموضوع',
+'message_deleted' => 'تم حذف الرسالة بنجاح',
+'show_message' => 'عرض الرسالة',
+
+
+
 ];
 
 

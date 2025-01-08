@@ -27,7 +27,7 @@
                                     <th>{{ __('keywords.title') }}</th>
                                     {{-- <th>{{ __('keywords.description') }}</th> --}}
                                     <th width="10%">{{ __('keywords.icon') }}</th>
-                                    <th width="15%">{{ __('keywords.actions') }}</th>
+                                    <th width="20%">{{ __('keywords.actions') }}</th>
 
                                 </tr>
                             </thead>

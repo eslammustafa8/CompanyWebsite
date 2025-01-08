@@ -1,10 +1,14 @@
 <?php
 
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
+
 
 
 
@@ -47,6 +51,16 @@ group(function(){
 //=========================== feature ==============================
             Route::controller(FeatureController::class)->group(function(){
             Route::resource('feature', FeatureController::class);
+
+        });
+//=========================== subscribers ==============================
+            Route::controller(SubscriberController::class)->group(function(){
+            Route::resource('subscribers', SubscriberController::class);
+
+        });
+//=========================== messages ==============================
+            Route::controller(MessageController::class)->group(function(){
+            Route::resource('messages', MessageController::class);
 
         });
 
