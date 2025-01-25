@@ -1,19 +1,10 @@
 /********** Template CSS **********/
 :root {
-    --bs-blue: #0d6efd;
-    --bs-dark: #000000; /* Set to full black */
-    --bs-gray-dark: #121212; /* Slightly lighter for contrast */
-    --bs-body-bg: #000000; /* Background for the body */
-    --bs-body-color: #ffffff; /* Text color for contrast */
-    --bs-primary: #212529; /* Adjust primary colors for the theme */
-    --bs-secondary: #6c757d;
-    --bs-light: #1e1e1e;
-    --bs-dark: #0a0a0a;
-    --bs-table-bg: #000000; /* Dark table background */
-    --bs-table-striped-bg: #1a1a1a;
-    --bs-table-hover-bg: #1a1a1a;
-    --bs-table-color: #ffffff;
+    --primary: #00B98E;
+    --light: #F3F6F8;
+    --dark: #0E2E50;
 }
+
 
 /*** Spinner ***/
 #spinner {
