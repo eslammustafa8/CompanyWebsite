@@ -64,5 +64,18 @@ return [
 
             
 
+    //testmonials
+    'testmonials'=>'Testmonials',
+    'testmonial'=>'Testmonial',
+    'position'=>'Position',
+    'image'=>'Image',
+    
+    'add_new_testmonial'=>'Add New Testmonial',
+    'testmonial_added'=>'Testmonial Added Successfully',
+    
+    'show_testmonial'  =>'Show Testmonial',
+    'update_testmonial'=>'Update Testmonial',
+    'testmonial_updated'=>'Testmonial Updated Successfully',
+    'testmonial_deleted'=>'Testmonial Deleted Successfully',
 
 ];

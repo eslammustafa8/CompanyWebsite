@@ -61,6 +61,20 @@ return [
 'message_deleted' => 'تم حذف الرسالة بنجاح',
 'show_message' => 'عرض الرسالة',
 
+    //testmonials
+'testmonials' => 'الآراء',
+    'testmonial'=>'الرأي',
+
+'position' => 'المنصب',
+'image' => 'صورة',
+
+'add_new_testmonial' => 'إضافة رأي جديد',
+'testmonial_added' => 'تمت إضافة الرأي بنجاح',
+
+'show_testmonial' => 'عرض الرأي',
+'update_testmonial' => 'تحديث الرأي',
+'testmonial_updated' => 'تم تحديث الرأي بنجاح',
+'testmonial_deleted' => 'تم حذف الرأي بنجاح',
 
 
 ];

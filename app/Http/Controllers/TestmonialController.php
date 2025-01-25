@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Testmonial;
 use App\Http\Requests\StoreTestmonialRequest;
 use App\Http\Requests\UpdateTestmonialRequest;
+use App\Models\Testmonial;
+use Illuminate\Support\Facades\Storage;
 
 class TestmonialController extends Controller
 {
@@ -13,16 +14,16 @@ class TestmonialController extends Controller
      */
     public function index()
     {
-       $services=Testmonial::paginate(4);
+       $testmonials=Testmonial::paginate(4);
 
-       return view('admin.services.index',get_defined_vars());    }
+       return view('admin.testmonials.index',get_defined_vars());    }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-              return view('admin.services.create',get_defined_vars());
+              return view('admin.testmonials.create',get_defined_vars());
     }
 
     /**
@@ -30,9 +31,14 @@ class TestmonialController extends Controller
      */
     public function store(StoreTestmonialRequest $request)
     {
-         $data=$request->validated();
-       Testmonial::create($data);
-        return redirect()->route('admin.services.index')->with('success',__('keywords.service_added'));
+
+         $data = $request->validated();
+        $image = $request->image;
+        $newImageName = time() . '-' . $image->getClientOriginalName();
+        $image->storeAs('testmonials', $newImageName, 'public');
+        $data['image'] = $newImageName;
+        Testmonial::create($data);
+        return redirect()->route('admin.testmonials.index')->with('success',__('keywords.testmonial_added'));
     }
 
     /**
@@ -40,16 +46,16 @@ class TestmonialController extends Controller
      */
     public function show(Testmonial $testmonial)
     {
-       return view('admin.services.show',get_defined_vars());
+       return view('admin.testmonials.show',get_defined_vars());
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Testmonial $testmonial)
     {
-        return view('admin.services.edit',get_defined_vars());
+        return view('admin.testmonials.edit',get_defined_vars());
     }
 
     /**
@@ -57,17 +63,29 @@ class TestmonialController extends Controller
      */
     public function update(UpdateTestmonialRequest $request, Testmonial $testmonial)
     {
-         $data=$request->validated();
+          $data = $request->validated();
+
+            if ($request->hasFile('image')) {
+       
+                Storage::delete("public/blogs/$testmonial->image");
+               
+                $image = $request->image;
+                
+                $newImageName = time() . '-' . $image->getClientOriginalName();
+                $image->storeAs('testmonials', $newImageName, 'public');
+                $data['image'] = $newImageName;
         $testmonial->update($data);
-        return redirect()->route('admin.services.index')->with('success',__('keywords.service_updated'));
-    }
+        return redirect()->route('admin.testmonials.index')->with('success',__('keywords.testmonial_updated'));
+    }}
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Testmonial $testmonial)
     {
+
+        Storage::delete("public/testmonials/$testmonial->image");
        $testmonial->delete();
-        return redirect()->route('admin.services.index')->with('success',__('keywords.service_deleted'));
+        return redirect()->route('admin.testmonials.index')->with('success',__('keywords.testmonial_deleted'));
     }
 }

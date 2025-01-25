@@ -22,14 +22,19 @@ class StoreTestmonialRequest extends FormRequest
     public function rules(): array
     {
          return [
-        // 'title' => 'required|string|max:150',
-            
+          'name' => 'required|string|max:150',
+          'position' => 'required|string|max:150',
+          'description' => 'required|string',
+          'image' => 'required|mimes:jpg,jpeg,png|max:2048',
         ];
     }
     public function attributes(): array
     {
         return [
-            //'title' => __('keywords.title'),
+            'name' => __('keywords.name'),
+            'position' => __('keywords.position'),
+            'image' => __('keywords.image'),
+            'description' => __('keywords.description'),
             
     
         ];

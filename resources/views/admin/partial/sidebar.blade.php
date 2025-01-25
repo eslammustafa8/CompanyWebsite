@@ -49,6 +49,10 @@
             <x-sidebar-component href="{{ route('admin.messages.index') }}" icon="fe-message-square"
                 name="{{ __('keywords.messages') }}">
             </x-sidebar-component>
+            {{-- testmonial --}}
+            <x-sidebar-component href="{{ route('admin.testmonials.index') }}" icon="fe-thumbs-up"
+                name="{{ __('keywords.testmonials') }}">
+            </x-sidebar-component>
 
         </ul>
 
