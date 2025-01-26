@@ -69,13 +69,46 @@ return [
     'testmonial'=>'Testmonial',
     'position'=>'Position',
     'image'=>'Image',
-    
     'add_new_testmonial'=>'Add New Testmonial',
     'testmonial_added'=>'Testmonial Added Successfully',
-    
     'show_testmonial'  =>'Show Testmonial',
     'update_testmonial'=>'Update Testmonial',
     'testmonial_updated'=>'Testmonial Updated Successfully',
     'testmonial_deleted'=>'Testmonial Deleted Successfully',
+
+
+    //team
+    'member'=>'Member',
+    'members'=>'Members',
+    'add_new_member'=>'Add New Member',
+    'member_added'=>'Member Added Successfully',
+    'show_member'  =>'Show Member',
+    'update_member'=>'Update Member',
+    'member_updated'=>'Member Updated Successfully',
+    'member_deleted'=>'Member Deleted Successfully',
+    'facebook'=>'Facebook',
+    'twitter'=>'Twitter',
+    'linkedin'=>'Linkedin',
+    'whatsapp'=>'Whatsapp',
+
+    //company
+    'company'=>'Company',
+    'companies'=>'Companies',
+    'add_new_company'=>'Add New Company',
+    'company_added'=>'Company Added Successfully',
+    'show_company'  =>'Show Company',
+    'update_company'=>'Update Company',
+    'company_updated'=>'Company Updated Successfully',
+    'company_deleted'=>'Company Deleted Successfully',
+    'Company_name' => 'Company Name',
+    
+
+    //settings
+    'settings'=>'Settings',
+    'update_settings'=>'Update Settings',
+    'settings_updated'=>'Settings Updated Successfully',
+    
+       
+    
 
 ];

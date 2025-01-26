@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('{{ table }}', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
-            
+            $table->string('name');
+            $table->string('email')->naullable();
+            $table->string('facebook')->naullable();
+            $table->string('linkedin')->naullable();
+            $table->string('whatsapp')->naullable();
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('{{ table }}');
+        Schema::dropIfExists('settings');
     }
 };

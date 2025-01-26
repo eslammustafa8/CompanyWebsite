@@ -41,7 +41,8 @@
             </x-sidebar-component>
 
             {{-- Subscribers --}}
-            <x-sidebar-component href="{{ route('admin.subscribers.index') }}" icon="fe-users"
+            <x-sidebar-component href="{{ route('admin.subscribers.index') }}" icon="fe-mail
+"
                 name="{{ __('keywords.subscribers') }}">
             </x-sidebar-component>
 
@@ -52,6 +53,19 @@
             {{-- testmonial --}}
             <x-sidebar-component href="{{ route('admin.testmonials.index') }}" icon="fe-thumbs-up"
                 name="{{ __('keywords.testmonials') }}">
+            </x-sidebar-component>
+
+            {{-- members --}}
+            <x-sidebar-component href="{{ route('admin.members.index') }}" icon="fe-users"
+                name="{{ __('keywords.members') }}">
+            </x-sidebar-component>
+            {{-- Company --}}
+            <x-sidebar-component href="{{ route('admin.companies.index') }}" icon="fe-slack"
+                name="{{ __('keywords.companies') }}">
+            </x-sidebar-component>
+            {{-- settings --}}
+            <x-sidebar-component href="{{ route('admin.settings.index') }}" icon="fe-settings"
+                name="{{ __('keywords.settings') }}">
             </x-sidebar-component>
 
         </ul>

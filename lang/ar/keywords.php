@@ -64,19 +64,46 @@ return [
     //testmonials
 'testmonials' => 'الآراء',
     'testmonial'=>'الرأي',
-
 'position' => 'المنصب',
 'image' => 'صورة',
 
 'add_new_testmonial' => 'إضافة رأي جديد',
 'testmonial_added' => 'تمت إضافة الرأي بنجاح',
-
 'show_testmonial' => 'عرض الرأي',
 'update_testmonial' => 'تحديث الرأي',
 'testmonial_updated' => 'تم تحديث الرأي بنجاح',
 'testmonial_deleted' => 'تم حذف الرأي بنجاح',
 
+//members
+'members' => 'الأعضاء',
+'member' => 'العضو',
+'add_new_member' => 'إضافة عضو جديد',
+'member_added' => 'تمت إضافة العضو بنجاح',
+'show_member' => 'عرض العضو',
+'update_member' => 'تحديث العضو',
+'member_updated' => 'تم تحديث العضو بنجاح',
+'member_deleted' => 'تم حذف العضو بنجاح',
 
+  
+    'facebook'=>'فيسبوك',
+    'twitter'=>'تويتر',
+    'linkedin'=>'لينكدان',
+    'whatsapp'=>'واتساب',
+    'youtube'=>'يوتيوب',
+    //
+    'company'=>'الشركة',
+    'companies'=>'الشركات',
+    'add_new_company'=>'إضافة شركة جديدة',
+    'company_added'=>'تمت إضافة الشركة بنجاح',
+    'show_company'=>'عرض الشركة',
+    'update_company'=>'تحديث الشركة',
+    'company_updated'=>'تم تحديث الشركة بنجاح',
+    'company_deleted'=>'تم حذف الشركة بنجاح',
+    //settings
+    'settings'=>'الإعدادات',
+    'update_settings'=>'تحديث الإعدادات',
+    'settings_updated'=>'تم تحديث الإعدادات بنجاح',
+       
 ];
 
 

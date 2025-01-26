@@ -1,13 +1,19 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TestmonialController; // Added import
+use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +71,20 @@ Route::name('admin.')
             Route::controller(TestmonialController::class)->group(function () {
                 Route::resource('testmonials', TestmonialController::class);
             });
-        });
+            //=========================== MEMBERS ==============================
+            Route::controller(MemberController::class)->group(function () {
+                Route::resource('members', MemberController::class);
+            });
+            //=========================== CompanyS ==============================
+            Route::controller(CompanyController::class)->group(function () {
+                Route::resource('companies', CompanyController::class);
+            });
+            
+            //===========================Settings ==============================
+            Route::controller(SettingController::class)->group(function () {
+                Route::resource('settings', SettingController::class);
+            });
+        }); 
         
         // Authentication routes
         require __DIR__ . '/auth.php';
